@@ -1,0 +1,35 @@
+select * from students; 
+
+UPDATE Students
+SET Age = 21
+WHERE StudentID = 1; 
+
+DELETE FROM Students
+WHERE StudentID = 3;
+
+
+select * from students
+where FirstName or Age = 21;
+
+DELETE FROM Students
+WHERE Age = 18; 
+
+create table Customers(
+CustomerID int  primary key,
+FirstName varchar(80) not null,
+LastName varchar(80) not null, 
+Email varchar(70) unique,
+Age int  check (Age>18)
+);
+
+describe Customers;
+
+create table Employees(
+EmployeeID int primary key,
+FirstName varchar(80) not null,
+LastName varchar(70) not null,
+Salary decimal check  (salary between 20000 and 100000) 
+);
+describe Employees; 
+select * from assignement;
+
